@@ -3,7 +3,7 @@
 Every animation in `entries/` has to pass `npm run check`. The rules:
 
 **File**
-- One self-contained SVG, under 8 KB.
+- One self-contained SVG, under 8 KB. A Content Credentials (C2PA) manifest in `<metadata>` is allowed and not counted.
 - Square `viewBox` starting at `0 0`. No `width` or `height` on the root.
 - `<title>` and `<desc>`.
 - No scripts, no `foreignObject`, no event handlers, no external references.

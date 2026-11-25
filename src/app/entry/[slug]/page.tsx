@@ -73,6 +73,11 @@ export default async function EntryPage({ params }: PageProps<"/entry/[slug]">) 
         </section>
         <Block title="Prompt" text={entry.prompt} copyLabel="Copy prompt" />
         <Block title="SVG" text={entry.svg.trim()} copyLabel="Copy SVG" />
+        {entry.credentials && (
+          <p className="max-w-[48ch] pt-4 text-mute">
+            The downloadable file also carries Content Credentials (C2PA) metadata that records how it was made. It is left out here for readability and is not counted in the size.
+          </p>
+        )}
       </div>
     </article>
   );

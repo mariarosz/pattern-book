@@ -11,6 +11,8 @@ export type Entry = z.infer<typeof metaSchema> & {
   prompt: string;
   svg: string;
   bytes: number;
+  /** The file carries a Content Credentials (C2PA) manifest, left out of `svg`. */
+  credentials: boolean;
 };
 
 const dir = join(process.cwd(), "entries");
@@ -22,7 +24,8 @@ export function getEntries(): Entry[] {
     .map((slug) => {
       const read = (name: string) => readFileSync(join(dir, slug, name), "utf8");
       const meta = metaSchema.parse(JSON.parse(read("meta.json")));
-      const svg = read("animation.svg");
+      const file = read("animation.svg");
+      const svg = file.replace(/<metadata>[\s\S]*?<\/metadata>/, "");
       return {
         ...meta,
         category: meta.category as Category,
@@ -30,6 +33,7 @@ export function getEntries(): Entry[] {
         prompt: read("prompt.md").trim(),
         svg,
         bytes: Buffer.byteLength(svg),
+        credentials: svg.length !== file.length,
         number: "",
       };
     })

@@ -1,5 +1,5 @@
 // Checks every entry against SPEC.md. Exits 1 on the first failing entry list.
-import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { metaSchema } from "../src/lib/schema.mjs";
 
@@ -18,12 +18,14 @@ for (const slug of readdirSync(dir)) {
     if (!meta.success) {
       for (const issue of meta.error.issues) errors.push(`meta.${issue.path.join(".")}: ${issue.message}`);
     }
-    const svg = readFileSync(file("animation.svg"), "utf8");
+    // Files may carry a Content Credentials (C2PA) manifest in <metadata>.
+    // It is provenance, not drawing, so the rules apply to the rest.
+    const svg = readFileSync(file("animation.svg"), "utf8").replace(/<metadata>[\s\S]*?<\/metadata>/, "");
     const rootTag = svg.match(/<svg[^>]*>/)?.[0] ?? "";
     const box = rootTag.match(/viewBox="0 0 (\d+) (\d+)"/);
     if (!box || box[1] !== box[2]) errors.push("root needs a square viewBox starting at 0 0");
     if (/\s(width|height)=/.test(rootTag)) errors.push("root must not set width or height");
-    if (statSync(file("animation.svg")).size > MAX_BYTES) errors.push("larger than 8 KB");
+    if (Buffer.byteLength(svg) > MAX_BYTES) errors.push("larger than 8 KB");
     if (/<script|<foreignObject|\son\w+=/i.test(svg)) errors.push("scripts, foreignObject and event handlers are not allowed");
     if (/(href|src)="(?!#)/i.test(svg) || /url\((?!['"]?#)/i.test(svg) || /@import/i.test(svg)) errors.push("external references are not allowed");
     if (!/<title[ >]/.test(svg) || !/<desc[ >]/.test(svg)) errors.push("needs <title> and <desc>");
