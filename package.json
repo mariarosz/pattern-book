@@ -7,7 +7,7 @@
     "sync": "node scripts/sync-entries.mjs",
     "check": "node scripts/check-entries.mjs",
     "lint": "eslint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "next typegen && tsc --noEmit"
   },
   "dependencies": {
     "next": "16.4.6",
