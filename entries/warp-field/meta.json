@@ -1,0 +1,16 @@
+{
+  "title": "Warp field",
+  "description": "A field of fine threads swaying slightly out of step.",
+  "alt": "About two dozen thin, gently curved vertical threads, mostly pale linen with a few peach, rose, blue and yellow ones, sway slowly from side to side.",
+  "category": "backgrounds",
+  "technique": "CSS keyframes",
+  "duration": 6,
+  "model": "claude-fable-5-2",
+  "date": "2026-11-25",
+  "provenance": "multi-turn",
+  "iterations": 2,
+  "reproduced": false,
+  "note": "A negative animation-delay per thread starts every thread mid-sway, so the field is already moving on the first frame and never shows a synchronised start. Review found the lean pivoting around the page corner by default; the second version names the pivot, the top of the threads, which is what makes them look hung.",
+  "author": "Maria Roszyk",
+  "license": "CC-BY-4.0"
+}

@@ -2,6 +2,8 @@
 
 An open library of SVG animations and the prompts that made them. Take the animation, or take the prompt and make your own.
 
+![The Pattern Book index: eight animated SVG entries in a two-column grid, among them dye blots, a gauze weave, a looping thread, a patchwork collage, a stitched loader, a button, a twill and a field of threads](docs/screenshot.png)
+
 Every entry is a folder:
 
 ```

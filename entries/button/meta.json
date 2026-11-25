@@ -1,0 +1,16 @@
+{
+  "title": "Button",
+  "description": "A four-hole button sewn on with two crossing stitches.",
+  "alt": "An outlined round button with four holes. Two peach stitches are drawn diagonally between the holes one after the other, the button dips at each pull, then the thread is removed.",
+  "category": "icons",
+  "technique": "CSS keyframes",
+  "duration": 4,
+  "model": "claude-fable-5-2",
+  "date": "2026-11-25",
+  "provenance": "multi-turn",
+  "iterations": 3,
+  "reproduced": false,
+  "note": "Describing the interaction as a physical event, each stitch pulls the button down a little, gives the press its timing for free. The first version drew the thread far thicker than everything else; it now has the same weight as the outline. Review also caught the two stitches leaving at once where the prompt asked for one after the other.",
+  "author": "Maria Roszyk",
+  "license": "CC-BY-4.0"
+}

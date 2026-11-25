@@ -1,0 +1,16 @@
+{
+  "title": "Twill",
+  "description": "A 2/2 twill appears float by float along the diagonal.",
+  "alt": "Short rounded bars, peach, blue and rose across and pale linen down, appear in a diagonal sweep to form the slanted ribs of a twill cloth, then clear in the same direction.",
+  "category": "weaves",
+  "technique": "CSS keyframes",
+  "duration": 6,
+  "model": "claude-fable-5-2",
+  "date": "2026-11-25",
+  "provenance": "single-shot",
+  "iterations": 1,
+  "reproduced": false,
+  "note": "Giving the rule for the weave as arithmetic, weft on top where (column − row) mod 4 is 0 or 1, yields a correct twill. Grouping the floats by diagonal lets one delay per group drive a hundred shapes and keeps the file small.",
+  "author": "Maria Roszyk",
+  "license": "CC-BY-4.0"
+}
