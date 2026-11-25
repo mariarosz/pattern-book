@@ -8,9 +8,9 @@ Geometry
 
 Motion
 - CSS keyframes only. No JavaScript, no SMIL.
-- Each blot grows from nothing to full size from its own centre, half a second apart, fast at first and then slowing like liquid soaking in. The masked texture grows with it.
-- Hold, then each blot fades.
-- One 6 second loop with no visible seam. Animate transform and opacity only.
+- Each blot rests as a small spot (14% of its size) and grows to full size from its own centre, half a second apart, easing in and out. The masked texture grows with it.
+- Hold, then each blot draws back to its spot. The square is never empty.
+- One 6 second loop with no visible seam. Animate transform only.
 
 Constraints
 - Colours as custom properties on the root.

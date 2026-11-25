@@ -8,9 +8,9 @@
   "model": "claude-fable-5-2",
   "date": "2026-11-24",
   "provenance": "multi-turn",
-  "iterations": 3,
+  "iterations": 4,
   "reproduced": false,
-  "note": "A dashed line cannot be drawn on with stroke-dashoffset, because the dashes are already using it; asking for an animated mask solves that. Review caught a doubled stitch where the dash period did not divide the circumference, and a jump at the loop seam from turning only half way.",
+  "note": "A dashed line cannot be drawn on with stroke-dashoffset, because the dashes are already using it; asking for an animated mask solves that. Review caught a doubled stitch where the dash period did not divide the circumference, and a jump at the loop seam from turning only half way. A later pass made the loop rest on a faint trace instead of an empty square.",
   "author": "Maria Roszyk",
   "license": "CC-BY-4.0"
 }

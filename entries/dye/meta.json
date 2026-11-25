@@ -1,16 +1,16 @@
 {
   "title": "Dye",
   "description": "Three blots spread, overlap and show the cloth beneath.",
-  "alt": "Soft blue, rose and yellow blots grow from three points, overlap into darker mixed tones, reveal a fine checked texture, then fade.",
+  "alt": "Soft blue, rose and yellow blots grow from three small spots, overlap into darker mixed tones, reveal a fine checked texture, then draw back.",
   "category": "masks",
   "technique": "CSS keyframes",
   "duration": 6,
   "model": "claude-fable-5-2",
   "date": "2026-11-24",
-  "provenance": "single-shot",
-  "iterations": 1,
+  "provenance": "multi-turn",
+  "iterations": 2,
   "reproduced": false,
-  "note": "Describing each blot as a circle disturbed by three sine waves gives soft, uneven edges without any filter. Reusing the same shapes as the mask keeps the cloth texture exactly inside the dye.",
+  "note": "Describing each blot as a circle disturbed by three sine waves gives soft, uneven edges without any filter. Reusing the same shapes as the mask keeps the cloth texture exactly inside the dye. The blots first grew from nothing and faded out; they now breathe between a small spot and full size.",
   "author": "Maria Roszyk",
   "license": "CC-BY-4.0"
 }

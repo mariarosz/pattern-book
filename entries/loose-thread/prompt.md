@@ -9,7 +9,7 @@ Geometry
 
 Motion
 - CSS keyframes only. No JavaScript, no SMIL.
-- Use pathLength="1". The thread draws from left to right, rests for about a second, then is drawn out again from the end where it began, so the loop starts and ends on an empty square.
+- Use pathLength="1". The thread draws from left to right, rests for about a second, then is drawn out again from the end where it began, stopping just short at both ends (offset ±0.955) so a short tail of thread is always in view.
 - One 6 second loop. Ease in and out.
 - Animate stroke-dashoffset only.
 

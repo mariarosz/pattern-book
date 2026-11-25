@@ -1,15 +1,15 @@
 # Pattern Book
 
-An open library of SVG animations and the prompts that made them. Take the animation, or take the prompt and make your own.
+An open library of SVG animations and the prompts behind them. Each animation was written by a language model (Claude) from the prompt beside it, then checked by a script and reviewed. Take the animation, or take the prompt and make your own.
 
-![The Pattern Book index: eight animated SVG entries in a two-column grid, among them dye blots, a gauze weave, a looping thread, a patchwork collage, a stitched loader, a button, a twill and a field of threads](docs/screenshot.png)
+![The Pattern Book index: animated SVG entries in a two-column grid, among them dye blots, a gauze weave, a looping thread and a patchwork collage](docs/screenshot.png)
 
 Every entry is a folder:
 
 ```
 entries/gauze/
   animation.svg   the result
-  prompt.md       the prompt that produced it
+  prompt.md       the prompt behind it
   meta.json       technique, model, how many turns it took, what the prompt taught
 ```
 

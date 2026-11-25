@@ -20,14 +20,16 @@ for (const slug of readdirSync(dir)) {
     }
     // Files may carry a Content Credentials (C2PA) manifest in <metadata>.
     // It is provenance, not drawing, so the rules apply to the rest.
-    const svg = readFileSync(file("animation.svg"), "utf8").replace(/<metadata>[\s\S]*?<\/metadata>/, "");
+    const raw = readFileSync(file("animation.svg"), "utf8");
+    const svg = raw.replace(/<metadata>[\s\S]*?<\/metadata>/, "");
     const rootTag = svg.match(/<svg[^>]*>/)?.[0] ?? "";
     const box = rootTag.match(/viewBox="0 0 (\d+) (\d+)"/);
     if (!box || box[1] !== box[2]) errors.push("root needs a square viewBox starting at 0 0");
     if (/\s(width|height)=/.test(rootTag)) errors.push("root must not set width or height");
     if (Buffer.byteLength(svg) > MAX_BYTES) errors.push("larger than 8 KB");
-    if (/<script|<foreignObject|\son\w+=/i.test(svg)) errors.push("scripts, foreignObject and event handlers are not allowed");
-    if (/(href|src)="(?!#)/i.test(svg) || /url\((?!['"]?#)/i.test(svg) || /@import/i.test(svg)) errors.push("external references are not allowed");
+    // Safety rules run on the whole file, metadata included.
+    if (/<script|<foreignObject|<set[\s>]|\son\w+\s*=/i.test(raw)) errors.push("scripts, foreignObject, <set> and event handlers are not allowed");
+    if (/(href|src)\s*=\s*["']?(?!["']?#)/i.test(raw) || /url\(\s*(?!['"]?#)/i.test(raw) || /@import/i.test(raw)) errors.push("external references are not allowed");
     if (!/<title[ >]/.test(svg) || !/<desc[ >]/.test(svg)) errors.push("needs <title> and <desc>");
     if (!/prefers-reduced-motion/.test(svg)) errors.push("needs a prefers-reduced-motion rule");
     const palette = ["#a8967b", "#e39b82", "#e2b4bb", "#8fa5cf", "#d9a938", "#111", "#fff"];

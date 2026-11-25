@@ -1,16 +1,16 @@
 {
   "title": "Patchwork",
   "description": "Five scraps settle into a collage and are stitched together.",
-  "alt": "Peach, striped blue, dotted rose, checked linen and yellow scraps of cloth drift together, overlap, and a dark line of running stitches is sewn across them.",
+  "alt": "Peach, striped blue, dotted rose, checked linen and yellow scraps of cloth drift together from a faint scatter, overlap, and a line of linen running stitches is sewn across them before they drift apart again.",
   "category": "weaves",
   "technique": "CSS keyframes",
   "duration": 6,
   "model": "claude-fable-5-2",
   "date": "2026-11-24",
   "provenance": "multi-turn",
-  "iterations": 3,
+  "iterations": 4,
   "reproduced": false,
-  "note": "Flat shapes read as cloth once each has a small repeating pattern and they blend where they overlap. The stitch was first the same linen colour as the cloth and vanished. Review then caught pattern grounds in colours outside the palette; building them from palette colours at low opacity also made the collage lighter.",
+  "note": "Flat shapes read as cloth once each has a small repeating pattern and they blend where they overlap. The stitch was first the same linen colour as the cloth and vanished. Review then caught pattern grounds in colours outside the palette; building them from palette colours at low opacity also made the collage lighter. The ink stitch was the only black in the library; a heavier linen stitch multiplied over the cloth holds without it. A later pass made the loop rest on a faint trace instead of an empty square.",
   "author": "Maria Roszyk",
   "license": "CC-BY-4.0"
 }

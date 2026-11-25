@@ -5,7 +5,8 @@
   --color-ink: #111111;
   --color-paper: #ffffff;
   --color-ground: #f3f3f1;
-  --color-mute: #808080;
+  --color-mute: #6b6b6b;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 }
 
 html {

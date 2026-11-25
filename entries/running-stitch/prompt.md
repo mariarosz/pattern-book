@@ -7,9 +7,9 @@ Geometry
 Motion
 - CSS keyframes only. No JavaScript, no SMIL.
 - The stitches are sewn around each ring starting at the top, the outer ring clockwise and the inner ring anticlockwise, held for a moment as complete rings, then unpicked from where they started.
-- A dashed stroke cannot be drawn with stroke-dashoffset, so reveal each ring through its own mask: a solid circle with pathLength="1" whose dash offset runs from 1 to 0 to -1.
+- A dashed stroke cannot be drawn with stroke-dashoffset, so reveal each ring through its own mask: a solid circle with pathLength="1" whose dash offset runs from 0.93 to 0 to -0.93, so two stitches are always in view.
 - While this happens both rings make one full revolution together, so the last stitch leaves where the first one arrives.
-- One 3 second loop that starts and ends empty. Ease in and out.
+- One 3 second loop. Ease in and out.
 
 Constraints
 - Colours as custom properties on the root.

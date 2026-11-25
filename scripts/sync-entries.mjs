@@ -9,12 +9,16 @@ const src = join(root, "entries");
 const out = join(root, "public", "entries");
 
 for (const slug of readdirSync(src)) {
-  const svg = readFileSync(join(src, slug, "animation.svg"), "utf8");
+  const full = readFileSync(join(src, slug, "animation.svg"), "utf8");
+  // The copies shown on the page drop any Content Credentials block to keep
+  // tiles light. The download keeps the file exactly as it is in the repo.
+  const svg = full.replace(/<metadata>[\s\S]*?<\/metadata>/, "");
   const poster = svg.replace(
     /<\/svg>\s*$/,
     "<style>*{animation:none!important}</style></svg>\n",
   );
   mkdirSync(join(out, slug), { recursive: true });
-  cpSync(join(src, slug, "animation.svg"), join(out, slug, "animation.svg"));
+  writeFileSync(join(out, slug, "animation.svg"), svg);
+  cpSync(join(src, slug, "animation.svg"), join(out, slug, `${slug}.svg`));
   writeFileSync(join(out, slug, "poster.svg"), poster);
 }

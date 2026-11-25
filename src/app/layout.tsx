@@ -14,7 +14,7 @@ const REPO = "https://github.com/mariarosz/pattern-book";
 export const metadata: Metadata = {
   title: { default: "Pattern Book", template: "%s | Pattern Book" },
   description:
-    "An open library of SVG animations and the prompts that made them.",
+    "An open library of SVG animations and the prompts behind them.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -27,11 +27,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
           Skip to content
         </a>
-        <header className="grid grid-cols-2 items-baseline gap-6 px-6 py-8 md:grid-cols-4">
-          <Link href="/" className="font-bold uppercase tracking-tight md:col-span-2">
+        <header className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 px-6 py-8 md:grid md:grid-cols-4">
+          <Link href="/" className="shrink-0 whitespace-nowrap font-bold uppercase tracking-tight md:col-span-2">
             Pattern Book
           </Link>
-          <nav aria-label="Main" className="flex justify-end gap-8 md:col-span-2 md:justify-start">
+          <nav aria-label="Main" className="flex gap-4 md:col-span-2 md:gap-8">
             <Link href="/">Index</Link>
             <Link href="/about/">About</Link>
             <a href={REPO}>GitHub</a>
