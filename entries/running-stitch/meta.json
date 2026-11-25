@@ -1,0 +1,16 @@
+{
+  "title": "Running stitch",
+  "description": "A loader sewn around a circle, then unpicked.",
+  "alt": "Two rings of short dashes, peach outside and linen inside, are drawn around a circle in opposite directions while turning once, then removed.",
+  "category": "loaders",
+  "technique": "CSS keyframes",
+  "duration": 3,
+  "model": "claude-fable-5-2",
+  "date": "2026-11-24",
+  "provenance": "multi-turn",
+  "iterations": 3,
+  "reproduced": false,
+  "note": "A dashed line cannot be drawn on with stroke-dashoffset, because the dashes are already using it; asking for an animated mask solves that. Review caught a doubled stitch where the dash period did not divide the circumference, and a jump at the loop seam from turning only half way.",
+  "author": "Maria Roszyk",
+  "license": "CC-BY-4.0"
+}

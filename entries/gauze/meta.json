@@ -1,0 +1,16 @@
+{
+  "title": "Gauze",
+  "description": "Twelve fine picks through a loose linen warp.",
+  "alt": "Thin peach, rose, blue and yellow threads slip one by one through pale linen threads to form a loose open cloth, then slip out.",
+  "category": "weaves",
+  "technique": "CSS keyframes",
+  "duration": 6,
+  "model": "claude-fable-5-2",
+  "date": "2026-11-24",
+  "provenance": "multi-turn",
+  "iterations": 3,
+  "reproduced": false,
+  "note": "The first version used thick black and white bands and was correct but heavy. Asking for thread instead of bands, and for over/under shown as gaps so no background colour is needed, is what made it light. Review found the palest threads disappearing at small sizes, so they are now slightly heavier.",
+  "author": "Maria Roszyk",
+  "license": "CC-BY-4.0"
+}

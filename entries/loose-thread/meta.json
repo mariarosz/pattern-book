@@ -1,0 +1,16 @@
+{
+  "title": "Loose thread",
+  "description": "One thread, five loops, drawn and drawn out again.",
+  "alt": "A thin peach thread loops across the square from left to right, rests, then disappears from the end where it began.",
+  "category": "line",
+  "technique": "CSS keyframes",
+  "duration": 6,
+  "model": "claude-fable-5-2",
+  "date": "2026-11-24",
+  "provenance": "multi-turn",
+  "iterations": 3,
+  "reproduced": false,
+  "note": "Naming the curve (a trochoid) gets a far more natural line than asking for something organic. The first envelope left small hooks at both ends; squaring the sine removed them. Review caught the text promising six loops where the curve shows five.",
+  "author": "Maria Roszyk",
+  "license": "CC-BY-4.0"
+}
